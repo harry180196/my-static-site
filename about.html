@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #aee2ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .bar {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #005bb5;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .sidebar a:hover {
+      background-color: #004999;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      main p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu Icon -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blogs.html">Blog</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>About Me</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Who Am I?</h2>
+    <p>
+      Hello! I'm Harpreet, a curious learner and cloud enthusiast passionate about exploring the world of Amazon Web Services (AWS). With a background in technology and a drive to grow in the cloud space, I created this site to document and share my AWS journey. This platform serves as both a learning journal and a hands-on guide for others who are just starting out. I believe the best way to understand the cloud is to build with it—so here you'll find real-world projects, clear explanations, and beginner-friendly tutorials. Whether you're switching careers, learning after a break, or starting fresh, you're welcome here!
+    </p>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

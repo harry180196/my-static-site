@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWS Beginner Projects</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #aee2ff; /* sky blue */
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    /* Sidebar menu button */
+    .menu-toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .bar {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    /* Sidebar nav */
+    .sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #005bb5;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .sidebar a:hover {
+      background-color: #004999;
+    }
+
+    /* Show sidebar when active */
+    .sidebar.active {
+      left: 0;
+    }
+
+    /* Main content */
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      main p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu Icon -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blogs.html">Blog</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Learn AWS by Doing: Real-World Cloud Projects for Beginners</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Start Your Cloud Journey</h2>
+    <p>
+      Cloud computing is revolutionizing the way we build, deploy, and scale technology. With on-demand access to services like storage, compute, and databases, cloud platforms have become essential for modern businesses and developers alike. 
+
+Amazon Web Services (AWS) is the leading provider in this space, offering powerful tools to build anything from personal websites to enterprise-level applications. This website is designed specifically for beginners who want to learn AWS through practical, hands-on experience. Instead of just reading theory, you’ll follow real-world use cases step by step—launching servers, securing environments, storing data, and more—all using AWS. Whether you're new to tech or switching careers, this guide will help you build confidence by actually doing.
+    </p>
+  </main>
+
+  <!-- JavaScript to toggle sidebar -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
